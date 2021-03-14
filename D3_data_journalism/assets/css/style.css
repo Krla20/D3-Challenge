@@ -14,6 +14,11 @@ body {
   padding-bottom: 80px;
 }
 
+h2{
+  margin-left: 75px;
+  /* background: lime; */
+  width: 130%;
+}
 .article {
   margin: auto;
   /* background: lime; */
