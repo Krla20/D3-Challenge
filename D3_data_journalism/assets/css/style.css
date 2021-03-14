@@ -18,7 +18,9 @@ body {
   margin: auto;
   /* background: lime; */
   width: 130%;
-}
+} 
+
+
 #footer {
   position: absolute;
   bottom: 0;
@@ -28,10 +30,6 @@ body {
   padding-bottom: 40px;
   text-align: center;
   background-color: #f5f5f5;
-}
-
-.stateText {
-  font: 14px comic;
 }
 
 #footer p {

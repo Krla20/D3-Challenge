@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>D3Times</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/d3Style.css">
 
@@ -28,17 +29,23 @@
       <div class="col-xs-12  col-md-9">
         <div class="article">
           <h2>Correlations Discovered Between Health Risks and Age, Income</h2>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-            quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-            quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-            quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <p>There appears to be a positive correlation between the Lacks Healthcare and In Poverty. Southern states
+            tend to have the highest rates of poverty and less healthcare coverage (with Texas being an outlier as it
+            has the highest % lacking healthcare) while some Northern states have the lowest rates of poverty and
+            lack of healthcare.</p>
+          <li>
+            Counties included in our poorest “state” come from 13 actual states (AL, AR, GA, IL, KY, LA, MS, OK, SC, SD,
+            TN, TX, and WV).
+          <li>
+            Counties in the wealthiest “state” come from 20 actual states (AK, CA, CO, CT, GA, IL, IN, KY, MD, MA, MN,
+            OH, NJ, NM, NY, PA, UT, TN, TX, and VA).
+          </li>
+          <li>
+            The U.S. Census Bureau announced on September 15th, 2020 that median household income in 2019 increased 6.8% from 2018,
+            and the official poverty rate decreased 1.3 percentage points. Meanwhile the percentage of people with health insurance
+            coverage for all or part of 2019 was 92.0% and 8.0% of people, or 26.1 million, did not have health insurance at any point
+            during 2019, according to the 2020 Current Population Survey Annual Social and Economic Supplement (CPS ASEC).
+          </li>
         </div>
       </div>
     </div>
@@ -46,11 +53,21 @@
 
   <!-- Footer-->
   <div id="footer">
+    <p>These findings are contained in two reports: 
+      <a href= "https://www.census.gov/library/publications/2020/demo/p60-270.html">Income and Poverty in the United States 2019</a> and
+      <a href= "https://www.census.gov/library/publications/2020/demo/p60-271.html">Health Insurance Coverage in the United States 2019.</a>
+    </p>
     <p>The Coding Boot Camp&copy;2021</p>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>

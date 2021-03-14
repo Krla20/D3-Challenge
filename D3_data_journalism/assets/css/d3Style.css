@@ -26,8 +26,11 @@
 /* font size dependent on radius, see app.js */
 .stateText {
   font-family: sans-serif;
-  fill: #fff;
+  /* fill: #fff; */
   text-anchor: middle;
+  color: black;
+  font-weight: bold; 
+  font-size: 10;
 }
 
 .stateCircle {
@@ -43,21 +46,24 @@
 .tooltip {
   position: absolute;
   width: 135px;
-  height: 60px;
+  height: 80px;
   padding: 2px;
   padding-top: 8px;
-  font: 12px sans-serif;
-  color: black;
+  /* font: 12px sans-serif; */
+  font: 14 px calibri;
+  color: navy;
+  font-weight: bolder;
   text-align: center;
-  background: #e2e2e2;
+  background: #dddddd;
   border: 0;
   border-radius: 10px;
 }
 
 .d3-tip {
   padding: 6px;
-  font-size: 12px;
-  line-height: 1;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 2;
   line-height: 1.5em;
   color: #fff;
   text-align: center;

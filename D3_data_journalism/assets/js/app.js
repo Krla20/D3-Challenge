@@ -19,13 +19,11 @@ const svg = d3.select("#scatter")
     .attr("width", svgWidth)
     .attr("height", svgHeight);
 
-// Initial Params
-// let chosenXAxis = "poverty";
-// let chosenYAxis = "healthcare";
-
-
-const chartGroup = svg.append("g")
+let chartGroup = svg.append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+// append text element
+let circlesTextGroup = chartGroup.append("g")
 
 d3.csv("assets/data/data.csv").then(function (stateData) {
     console.log(stateData);
@@ -40,15 +38,17 @@ d3.csv("assets/data/data.csv").then(function (stateData) {
   // Step 2: Create scale functions
   // ==============================
     let xLinearScale = d3.scaleLinear()
-    .domain([0, d3.max(stateData, d => d.poverty)])
+    .domain([((d3.min(stateData, d=> d.poverty))-2), (d3.max(stateData, d => d.poverty))+3])
+    // .domain([0, d3.max(stateData, d => d.poverty)])
     .range([0, width]);
 
     let yLinearScale = d3.scaleLinear()
-    .domain([0, d3.max(stateData, d => d.healthcare)])
+    .domain([((d3.min(stateData, d=> d.healthcare))-2), (d3.max(stateData, d => d.healthcare))+2])
+    // .domain([0, d3.max(stateData, d => d.healthcare)])
     .range([height, 0]);
 
   // Step 3: Create axis functions
-  // ==============================
+//   // ==============================
     let bottomAxis = d3.axisBottom(xLinearScale);
     let leftAxis = d3.axisLeft(yLinearScale);
 
@@ -61,30 +61,32 @@ d3.csv("assets/data/data.csv").then(function (stateData) {
     chartGroup.append("g")
     .call(leftAxis);
 
-    // chartGroup.append("g")
-    // .call(circlesText);
-
   // Step 5: Create Circles
   // // ==============================
-    let circlesGroup = chartGroup.selectAll("circle")
+    circlesGroup = chartGroup.selectAll("circle")
         .data(stateData)
         .enter()
         .append("circle")
         .attr("cx", d => xLinearScale(d.poverty))
         .attr("cy", d => yLinearScale(d.healthcare))
         .text(d => d.abbr)
-        .attr("r", "15")
-        .attr("fill", "green")
-        .attr("opacity", ".5");  
+        .attr("r", "20")
+        .style("font-weight", "bold")
+        .attr("fill", "navy")
+        .attr("stroke", "black")
+        .attr("opacity", ".3");  
         
-    svg.selectAll("text")
+    textGroup = circlesTextGroup.selectAll("text")
         .data(stateData)
         .enter()
         .append("text")
         .text(d => d.abbr)
-        // .attr("x", (d, i) => d[0]+5)
-        // .attr("y", (d, i) => svgHeight -d[1])
+        .style("font-weight", "bold")
+        .attr("x", d => xLinearScale(d.poverty))
+        .attr("y", d => yLinearScale(d.healthcare) + 5)
         .classed("stateText", true);
+        // .attr("class", "stateText")
+    
     
     // updates circles text with new x values
     // circlesText = renderXText(circlesText, xLinearScale);
@@ -116,7 +118,7 @@ d3.csv("assets/data/data.csv").then(function (stateData) {
     chartGroup.append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 0 - margin.left + 40)
-        .attr("x", 0 - (height / 2))
+        .attr("x", 0 - (height / 1.5))
         // .attr("dy", "1em")
         .attr("class", "axisText")
         .style("fill", "black")
@@ -134,3 +136,5 @@ d3.csv("assets/data/data.csv").then(function (stateData) {
     }).catch(function (error) {
     console.log(error);
 });
+
+// https://observablehq.com/@abebrath/scatterplot-of-text-labels
