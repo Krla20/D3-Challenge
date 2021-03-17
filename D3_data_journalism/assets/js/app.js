@@ -88,9 +88,6 @@ d3.csv("assets/data/data.csv").then(function (stateData) {
         // .attr("class", "stateText")
     
     
-    // updates circles text with new x values
-    // circlesText = renderXText(circlesText, xLinearScale);
-    
   // Step 6: Initialize tool tip
   // ==============================
     let toolTip = d3.tip()
@@ -137,4 +134,5 @@ d3.csv("assets/data/data.csv").then(function (stateData) {
     console.log(error);
 });
 
+// circle text help:
 // https://observablehq.com/@abebrath/scatterplot-of-text-labels
