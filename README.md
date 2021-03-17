@@ -28,7 +28,10 @@ Using the D3 techniques we taught you in class, create a scatter plot that repre
 
 * Create and situate your axes and labels to the left and bottom of the chart.
 
-<div class="text-purple">
-* Added as customization event listener to display and hide tooltip with the mouseover/mouseout event.
+<div class="text-blue mb-2">
+Added as customization event listener to display and hide tooltip with the mouseover/mouseout event.
 </div>
+
+
+
 * Note: You'll need to use `python -m http.server` to run the visualization. This will host the page at `localhost:8000` in your web browser.
