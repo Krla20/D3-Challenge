@@ -30,8 +30,10 @@ Using the D3 techniques we taught you in class, create a scatter plot that repre
 
 * Note: Use `python -m http.server` to run the visualization. This will host the page at `localhost:8000` in your web browser.
 
-* ***Added as customization event listener to display and hide tooltip with the mouseover/mouseout event.***
+***Added as customization event listener to display and hide tooltip with the mouseover/mouseout event.***
 <br>
-<p align="center"><img width="700" height= "500" src="D3_data_journalism/Images/Capture1.PNG"></p>
-<p align="center"><img width="700" height= "400" src="D3_data_journalism/Images/Capture.PNG"></p>
+<p align="center"><img width="400" height= "300" src="D3_data_journalism/Images/Capture1.PNG"></p>
+
+ ***Final result***
+<p align="center"><img width="100%" height= "100%" src="D3_data_journalism/Images/Capture2.PNG"></p>
 
